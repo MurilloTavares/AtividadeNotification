@@ -1,6 +1,8 @@
 package br.edu.ifpb.atividadenotification;
 
-public class Noticia {
+import java.io.Serializable;
+
+public class Noticia implements Serializable {
 
     private String title;
     private String summary;
@@ -36,4 +38,12 @@ public class Noticia {
         this.content = content;
     }
 
+    @Override
+    public String toString() {
+        return "Noticia{" +
+                "title='" + title + '\'' +
+                ", summary='" + summary + '\'' +
+                ", content='" + content + '\'' +
+                '}';
+    }
 }
