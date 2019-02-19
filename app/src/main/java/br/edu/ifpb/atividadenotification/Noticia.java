@@ -1,6 +1,7 @@
 package br.edu.ifpb.atividadenotification;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Noticia implements Serializable {
 
@@ -36,6 +37,21 @@ public class Noticia implements Serializable {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Noticia noticia = (Noticia) o;
+        return Objects.equals(title, noticia.title) &&
+                Objects.equals(summary, noticia.summary) &&
+                Objects.equals(content, noticia.content);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, summary, content);
     }
 
     @Override

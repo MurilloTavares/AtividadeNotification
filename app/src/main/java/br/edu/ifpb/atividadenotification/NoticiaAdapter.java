@@ -25,7 +25,6 @@ public class NoticiaAdapter extends ArrayAdapter<Noticia> {
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.noticia, parent, false);
-
         TextView title = (TextView) rowView.findViewById(R.id.noticia_title);
         TextView summary = (TextView) rowView.findViewById(R.id.noticia_summary);
         TextView content = (TextView) rowView.findViewById(R.id.noticia_content);

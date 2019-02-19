@@ -44,7 +44,7 @@ public class NoticiasPuller extends IntentService {
         bundle.putSerializable("noticias", (Serializable) noticias);
         intent.putExtra("bundle", bundle);
         this.sendBroadcast(intent);
-        Log.v(LOGTAG, "mandando noticias broadcast");
+        Log.v(LOGTAG, "mandando noticias broadcast: "+noticias.size()+" noticias");
     }
 
     private ArrayList<Noticia> getNoticias(){
